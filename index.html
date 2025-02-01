@@ -27,10 +27,16 @@
 </--home section design---->
 <section class="home" id="home">
     <div class="home-content">
-        <h3>Hello, It's Me</h3>
+        <h3>नमस्ते 🙏. It's Me</h3>
         <h1>MOHIT SHARMA</h1>
-        <h3>And I'm a <span class="multiple-text">Full Stack Developer</span></h3>
-        <p>HI! I'm Mohit. I am from jammu and kashmir. I'm a Engineer. I am Ncc cadet also.</p>
+        <h3>And I'm a
+             <span style="--i:4;" data-text="Full Stack Developer">Full Stack Developer</span>
+             <span style="--i:3;" data-text="Network Engineer">Network Engineer</span>
+             <span style="--i:2;" data-text="Data Analyst">Data Analyst</span>
+             <span style="--i:1;" data-text="Vlogger">Vlogger</span>
+            
+            </h3>
+        <!--<p>HI! I'm Mohit. I am from jammu and kashmir, I'm a Computer Engineer.</p>*/ -->
         <div class="social-media">
             <a href="https://www.facebook.com/profile.php?id=100048841418703" target="_blank"><i class='bx bxl-facebook'></i></a>
             <a href="https://www.instagram.com/mohitsharma__01/" target="_blank"><i class='bx bxl-instagram' ></i></a>
@@ -41,22 +47,69 @@
     </div>
 
     <div class="home-img">
-        <img src="55.png"alt="profile image">
+        <img src="ai.png"alt="profile image">
     </div>
 </section>
 
 </--about section design---->
 <section class="about" id="about">
     <div class="about-img">
-        <img src="11.png" alt="">
+        <img src="13.png" alt="">
     </div>
 
     <div class="about-content">
     <h2 class="heading">About<span>Me</span></h2>
-    <h3>Frontend Developer!</h3>
-    <p> This is about section. I  discuss all the other things in this section. </p>
-    <a href="#" class="btn">Read More</a>
+    <!-- <h3>Frontend Developer!</h3> -->
+    <p>I am an MBA student specializing in Information Technology, with a Bachelor's degree in Computer Science and Engineering. I possess strong full-stack development, data analysis, and network engineering skills, particularly in Python, PostgreSQL, MySQL, HTML, CSS, and JavaScript. I am also experienced in project optimization and leadership.</p>
+
+    <div class="tab-tittles">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+        <p class="tab-links"onclick="opentab('education')">Education</p>
     </div>
+    <div class="tab-contents active-tab" id="skills">
+        <ul>
+            <li><span>UI&UX</span><br>Designing web Interface</li>
+            <li><span>Web Developer</span><br>Web App Development</li>
+            <li><span>Data Analyst</span><br>Create PowerBi Dashboard/Data management</li>
+        </ul>
+
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+            <li><span>2024 - current</span><br>Network Enginner Intern at NHPC Limited </li>
+            <li><span>2022 - 2024</span><br>Web Developer Intern at Suven Consultant PVT. LID</li>
+            <li><span>2025 - current</span><br>Data Analyst Training at Skill Cources E-learn platform by satish dhawale </li>
+        </ul>
+
+    </div>
+    <div class="tab-contents" id="education">
+        <ul>
+            <li><span>2024 - current</span><br>Doing MBA at Kurukshetra University, Kurukshetra, Haryana </li>
+            <li><span>2021 - 2024</span><br>BTech form Bundelkhand University Jhansi</li>
+            <li><span>High School and Intermediate</span><br>Manu Shiksha Kendara Higher Secondary School Rakbagh</li>
+        </ul>
+
+    </div>
+    <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
 
 </section>
 </--My skill section design---->
@@ -71,9 +124,9 @@
         </div>
         
         <div class="services-box">
-            <i class='bx bxs-edit-alt'></i>
-            <h3>Content Writer</h3>
-            <p>Hi! -------------------------- </p>
+            <i class='bx bxs-data'></i>
+            <h3>Data Analyst</h3>
+            <p>I specialize in data analysis, utilizing PostgreSQL, MySQL, Microsoft Office, Python, and Power BI to analyze and visualize data, delivering actionable insights that drive informed decision-making and business growth.</p>
             <a href="#" class="btn">Read More</a>
         </div>
 
@@ -92,7 +145,7 @@
     <h2 class="heading"> <span>Education </span>Detail</h2>
   <div class="timeline">
 
-    <div class="container left-container" >
+    <div class="containe left-container" >
         <img src="msk.png" alt="">
         <div class="text-box">
             <h2>M.S.K higher seconday school Rajbagh.</h2>
@@ -102,7 +155,7 @@
 
         </div>
     </div>
-    <div class="container right-container">
+    <div class="containe right-container">
         <img src="bu.png" alt="">
         <div class="text-box">
            <h2>Bundelkhand University Jhansi.</h2>
@@ -112,46 +165,37 @@
 
         </div>
     </div>
-    <div class="container left-container">
-        <img src="intern.png" alt="">
-        <div class="text-box">
-            <h2>Suven Consultants & Technology Pvt Ltd.</h2>
-            <small>2023</small>
-            <p>I work as a intern in this Company and played frontend Developer role in it. I work on Four Project in this company.</p>
-            <span class="left-container-arrow"></span>
-
-        </div>
-    </div>
-    <div class="container right-container">
+    <div class="containe left-container">
         <img src="ncc.jpg" alt="">
         <div class="text-box">
-            <h2>National Cadet Corps.</h2>
+            <h2>National Cadet Corps</h2>
             <small>2021-2024</small>
-            <p>I'm a Ncc Cadet at 3/56 UP BN. Ncc Jhansi. This is a great experience for me to represent myself as a volunteer.</p>
-            <span class="right-container-arrow"></span>
-
-        </div>
-    </div>
-    <div class="container left-container">
-        <img src="tech.jpg" alt="">
-        <div class="text-box">
-            <h2>Techkriti IIT kanpur Workshop.</h2>
-            <small>2022</small>
-            <p>I Did as a volunteer act on this workshop.</p>
+            <p>I'm a Ncc Cadet at 3/56 UP BN. Ncc Jhansi.This is a great experience for me to represent myself as a volunteer.</p>
             <span class="left-container-arrow"></span>
 
         </div>
     </div>
-    <div class="container right-container">
-        <img src="tcs.jpg" alt="">
+    <div class="containe right-container">
+        <img src="kuk.png" alt="">
         <div class="text-box">
-            <h2>TCS iON Career Edge - Young Professional.</h2>
-            <small>2023</small>
-            <p>This is a Young Professional coures conducted by Tcs. I Completed this course with A-Grade.</p>
+            <h2>Kurukshetra University, Kurukshetra, Haryana</h2>
+            <small>2024-2026</small>
+            <p>I am currently pursuing an MBA in Information Technology by distance mode to enhance my management and technical skills.</p>
             <span class="right-container-arrow"></span>
 
         </div>
     </div>
+    <div class="containe left-container">
+        <img src="nhpc.png" alt="">
+        <div class="text-box">
+            <h2>NHPC India</h2>
+            <small>2024-2025</small>
+            <p>I interned at NHPC's IT wing as a Data Analyst and Network Engineer, gaining technical expertise.</p>
+            <span class="left-container-arrow"></span>
+
+        </div>
+    </div>
+    
  </div>
 </section>
 
@@ -230,7 +274,70 @@
         <input type="submit" value="Send Message" class="btn">
        
 </section>----->
-<!-----footer section----->
+
+<!-- content -->
+<section class="contact">
+    <div class="content">
+        <h2>Get in Touch</h2>
+        <p>Slide into my inbox, and let’s turn this conversation into something unforgettable. 😉✨</p>
+    </div>
+    <div class="container">
+        <div class="contact-info">
+            <div class="box">
+                <div class="icon"><b><i class='bx bx-home'></i></b></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>near govt Primary school Dhanal Kathua Jammu And Kashmir</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><b><i class='bx bx-phone'></i></b></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>9149987210</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><b><i class='bx bxl-gmail'></i></b></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>mohit199sharma199@gmail.com</p>
+                </div>
+            </div>
+            <!-- <h2 class="txt"> Connect with me</h2>
+            <ul class="sci">
+                <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+                <li><a href=""><i class='bx bxl-snapchat'></i></a></li>
+                <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                <li><a href=""><i class='bx bxl-linkedin' ></i></a></li>
+            </ul> -->
+        </div>
+        <div class="contactForm">
+            <form name="submit-to-google-sheet">
+                <h2>Send messange</h2>
+                <div class="inputBox">
+                    <input type="text" name="Name" required="required">
+                    <span>Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="Email" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <textarea name="Message" required="required"></textarea>
+                    <span>Type your Messange...</span>
+                </div><div class="inputBox">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        
+        </div>
+        <span id="msg"></span>
+    </div>
+
+</section>
+
+<!-- footer section -->
 <footer class="footer">
    
  <ul class="social-icons">
@@ -272,6 +379,24 @@
 
 
 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZUlSIBDOpT1TRi4ESiC3emF4tBb48r770fmOAvUW5kwaT44TQnrUy_9QTeqpXXbdQQA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Messsage sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </body>
 </html>
